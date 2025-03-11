@@ -45,9 +45,9 @@
     },
     {
       "name": "bloc",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/bloc-9.0.0",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/bloc-8.1.4",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.12"
     },
     {
       "name": "boolean_selector",
@@ -201,9 +201,9 @@
     },
     {
       "name": "flutter_bloc",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/flutter_bloc-9.1.0",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/flutter_bloc-8.1.6",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.12"
     },
     {
       "name": "flutter_gen_core",
@@ -590,7 +590,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2025-03-11T06:54:43.606114Z",
+  "generated": "2025-03-11T07:31:25.662281Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/abdullah/open_app_flutter_version/flutter",
