@@ -3,15 +3,15 @@
   "packages": [
     {
       "name": "_fe_analyzer_shared",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-80.0.0",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-82.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.3"
+      "languageVersion": "3.5"
     },
     {
       "name": "analyzer",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/analyzer-7.3.0",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/analyzer-7.4.4",
       "packageUri": "lib/",
-      "languageVersion": "3.3"
+      "languageVersion": "3.5"
     },
     {
       "name": "another_flushbar",
@@ -21,7 +21,7 @@
     },
     {
       "name": "archive",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/archive-4.0.4",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/archive-4.0.7",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -45,9 +45,9 @@
     },
     {
       "name": "bloc",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/bloc-8.1.4",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/bloc-9.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "boolean_selector",
@@ -195,15 +195,15 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/abdullah/open_app_flutter_version/flutter/packages/flutter",
+      "rootUri": "file:///Users/abdullah/development/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
     {
       "name": "flutter_bloc",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/flutter_bloc-8.1.6",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/flutter_bloc-9.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "flutter_gen_core",
@@ -231,13 +231,13 @@
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/flutter_svg-2.0.17",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/flutter_svg-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///Users/abdullah/open_app_flutter_version/flutter/packages/flutter_test",
+      "rootUri": "file:///Users/abdullah/development/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -411,13 +411,13 @@
     },
     {
       "name": "posix",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/posix-6.0.1",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/posix-6.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "provider",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/provider-6.1.2",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/provider-6.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -447,7 +447,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/abdullah/open_app_flutter_version/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/abdullah/development/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -561,13 +561,13 @@
     },
     {
       "name": "web_socket",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/web_socket-0.1.6",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/web_socket-1.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.3"
+      "languageVersion": "3.4"
     },
     {
       "name": "web_socket_channel",
-      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/web_socket_channel-3.0.2",
+      "rootUri": "file:///Users/abdullah/.pub-cache/hosted/pub.dev/web_socket_channel-3.0.3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -590,10 +590,10 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2025-03-17T00:48:45.345592Z",
+  "generated": "2025-04-23T08:23:19.717769Z",
   "generator": "pub",
-  "generatorVersion": "3.7.0",
-  "flutterRoot": "file:///Users/abdullah/open_app_flutter_version/flutter",
-  "flutterVersion": "3.29.0",
+  "generatorVersion": "3.7.2",
+  "flutterRoot": "file:///Users/abdullah/development/flutter",
+  "flutterVersion": "3.29.2",
   "pubCache": "file:///Users/abdullah/.pub-cache"
 }
