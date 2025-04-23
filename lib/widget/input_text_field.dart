@@ -23,6 +23,10 @@ class InputTextField extends StatefulWidget {
     this.textInputAction,
     this.onSubmitted,
     this.enabled = true,
+    this.color,
+    this.textStyle,
+    this.hintStyle,
+    this.suffixColor,
   });
 
   final String? hintText;
@@ -40,6 +44,10 @@ class InputTextField extends StatefulWidget {
   final TextInputAction? textInputAction;
   final void Function(String)? onSubmitted;
   final bool enabled;
+  final Color? color;
+  final TextStyle? textStyle;
+  final TextStyle? hintStyle;
+  final ColorFilter? suffixColor;
 
   @override
   State<InputTextField> createState() => _InputTextFieldState();
@@ -49,14 +57,12 @@ class _InputTextFieldState extends State<InputTextField> {
   bool passwordHidden = true;
   @override
   void didUpdateWidget(covariant InputTextField oldWidget) {
-    if (oldWidget.value != widget.value &&
-        widget.lengthLimit == widget.value?.length) {
+    if (oldWidget.value != widget.value && widget.lengthLimit == widget.value?.length) {
       FocusScope.of(context).unfocus();
     }
     if (oldWidget.keyboardType != widget.keyboardType) {
       FocusScope.of(context).unfocus();
-      Future<void>.delayed(Durations.short1)
-          .then((value) => FocusScope.of(context).requestFocus());
+      Future<void>.delayed(Durations.short1).then((value) => FocusScope.of(context).requestFocus());
     }
     super.didUpdateWidget(oldWidget);
   }
@@ -69,8 +75,7 @@ class _InputTextFieldState extends State<InputTextField> {
         scrollPadding: const EdgeInsets.only(bottom: 500).r,
         controller: widget.controller,
         textAlignVertical: TextAlignVertical.center,
-        textCapitalization:
-            widget.textCapitalization ?? TextCapitalization.none,
+        textCapitalization: widget.textCapitalization ?? TextCapitalization.none,
         keyboardType: widget.keyboardType,
         focusNode: widget.focusNode,
         style: context.textTheme.inputTextStyle,
@@ -94,7 +99,7 @@ class _InputTextFieldState extends State<InputTextField> {
               Radius.circular(15),
             ).r,
           ),
-          fillColor: context.colorScheme.inputFieldColor,
+          fillColor: widget.color ?? context.colorScheme.inputFieldColor,
           prefixIconConstraints: const BoxConstraints(),
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.suffixIcon ??
@@ -109,12 +114,14 @@ class _InputTextFieldState extends State<InputTextField> {
                               width: 24,
                               height: 24,
                               fit: BoxFit.none,
+                              colorFilter: widget.suffixColor,
                             )
                           : SvgIcon(
                               icon: Assets.icons.eyeHidden,
                               width: 24,
                               height: 24,
                               fit: BoxFit.none,
+                              colorFilter: widget.suffixColor,
                             ),
                     )
                   : null),

@@ -21,6 +21,8 @@ class SharedScaffold extends StatefulWidget {
     this.padding,
     this.endDrawer,
     this.onBackButton,
+    this.backgroundColor,
+    this.loadingColor,
   });
 
   final Widget child;
@@ -32,6 +34,8 @@ class SharedScaffold extends StatefulWidget {
   final EdgeInsets? padding;
   final Widget? endDrawer;
   final VoidCallback? onBackButton;
+  final Color? backgroundColor;
+  final ColorFilter? loadingColor;
 
   @override
   State<SharedScaffold> createState() => _SharedScaffoldState();
@@ -74,37 +78,45 @@ class _SharedScaffoldState extends State<SharedScaffold> with TickerProviderStat
   Widget build(BuildContext context) => Stack(
         alignment: Alignment.center,
         children: [
-          Container(
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height,
-            alignment: Alignment.topRight,
-            decoration: BoxDecoration(
-              gradient: RadialGradient(
-                center: const Alignment(1.5, -1.5),
-                radius: 1.4,
-                colors: <Color>[
-                  const Color(0xFFA4A8FF),
-                  const Color(0xffF2F2F5).withOpacity(1),
-                ],
-                stops: const [0, 1],
+          if (widget.backgroundColor != null)
+            Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height,
+              color: widget.backgroundColor,
+            )
+          else ...[
+            Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height,
+              alignment: Alignment.topRight,
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  center: const Alignment(1.5, -1.5),
+                  radius: 1.4,
+                  colors: <Color>[
+                    const Color(0xFFA4A8FF),
+                    const Color(0xffF2F2F5).withOpacity(1),
+                  ],
+                  stops: const [0, 1],
+                ),
               ),
             ),
-          ),
-          Container(
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(
-              gradient: RadialGradient(
-                center: const Alignment(2, -0.5),
-                radius: 1.1,
-                colors: [
-                  const Color(0xFFFFA4E0),
-                  const Color(0xffF2F3F5).withOpacity(0),
-                ],
-                stops: const [0.01, 1],
+            Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height,
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  center: const Alignment(2, -0.5),
+                  radius: 1.1,
+                  colors: [
+                    const Color(0xFFFFA4E0),
+                    const Color(0xffF2F3F5).withOpacity(0),
+                  ],
+                  stops: const [0.01, 1],
+                ),
               ),
             ),
-          ),
+          ],
           GestureDetector(
             behavior: HitTestBehavior.opaque,
             onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
@@ -151,6 +163,7 @@ class _SharedScaffoldState extends State<SharedScaffold> with TickerProviderStat
               animation: animationController,
               child: SvgIcon(
                 icon: Assets.icons.circleProgress,
+		colorFilter: widget.loadingColor,
               ),
             ),
           },
