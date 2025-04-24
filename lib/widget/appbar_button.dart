@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mani_uikit/theme/theme.dart';
 import 'package:mani_uikit/util/util.dart';
 
@@ -27,7 +26,7 @@ class AppbarButton extends StatelessWidget {
               child: Text(
                 locale.languageCode == 'uz' ? 'Русский' : 'English',
                 style: context.textTheme.titleTextStyle.copyWith(
-                  fontSize: 12.sp,
+                  fontSize: 12,
                   fontWeight: FontWeight.bold,
                 ),
               ),

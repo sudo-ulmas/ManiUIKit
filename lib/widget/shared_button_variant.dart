@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mani_uikit/theme/theme.dart';
 
 class SharedButtonVariant extends StatefulWidget {
@@ -26,8 +25,7 @@ class SharedButtonVariant extends StatefulWidget {
   State<SharedButtonVariant> createState() => _SharedButtonVariantState();
 }
 
-class _SharedButtonVariantState extends State<SharedButtonVariant>
-    with TickerProviderStateMixin {
+class _SharedButtonVariantState extends State<SharedButtonVariant> with TickerProviderStateMixin {
   late final AnimationController scaleController;
   late Animation<double> scaleAnimation;
 
@@ -62,15 +60,11 @@ class _SharedButtonVariantState extends State<SharedButtonVariant>
               return Transform.scale(
                 scale: scaleAnimation.value,
                 child: Container(
-                  height: widget.height ?? AppDimensions.buttonHeight.r,
+                  height: widget.height ?? AppDimensions.buttonHeight,
                   decoration: BoxDecoration(
-                    border: widget.border
-                        ? Border.all(color: context.colorScheme.borderColor)
-                        : null,
+                    border: widget.border ? Border.all(color: context.colorScheme.borderColor) : null,
                     color: context.colorScheme.cardColor,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(AppDimensions.buttonBorderRadius),
-                    ).r,
+                    borderRadius: const BorderRadius.all(Radius.circular(AppDimensions.buttonBorderRadius)),
                   ),
                   alignment: Alignment.center,
                   child: widget.loading
@@ -79,9 +73,7 @@ class _SharedButtonVariantState extends State<SharedButtonVariant>
                           widget.title,
                           style: widget.textStyle ??
                               context.textTheme.buttonTextStyle.copyWith(
-                                color: widget.highlight
-                                    ? Colors.orange
-                                    : context.colorScheme.primaryTextColor,
+                                color: widget.highlight ? Colors.orange : context.colorScheme.primaryTextColor,
                               ),
                         ),
                 ),

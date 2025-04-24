@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mani_uikit/theme/theme.dart';
 import 'package:mani_uikit/util/util.dart';
 import 'package:mani_uikit/widget/svg_icon.dart';
@@ -72,7 +71,7 @@ class _InputTextFieldState extends State<InputTextField> {
         enabled: widget.enabled,
         onChanged: widget.onChanged,
         enableSuggestions: false,
-        scrollPadding: const EdgeInsets.only(bottom: 500).r,
+        scrollPadding: const EdgeInsets.only(bottom: 500),
         controller: widget.controller,
         textAlignVertical: TextAlignVertical.center,
         textCapitalization: widget.textCapitalization ?? TextCapitalization.none,
@@ -90,14 +89,14 @@ class _InputTextFieldState extends State<InputTextField> {
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 14,
             vertical: AppDimensions.defaultPadding,
-          ).r,
+          ),
           hintText: widget.hintText,
           hintStyle: context.textTheme.hintTextStyle,
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderSide: BorderSide.none,
-            borderRadius: const BorderRadius.all(
-              Radius.circular(15),
-            ).r,
+            borderRadius:  BorderRadius.all(
+              Radius.circular(15)
+            ),
           ),
           fillColor: widget.color ?? context.colorScheme.inputFieldColor,
           prefixIconConstraints: const BoxConstraints(),

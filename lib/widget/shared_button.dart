@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mani_uikit/theme/theme.dart';
 
 class SharedButton extends StatefulWidget {
@@ -65,12 +64,12 @@ class _SharedButtonState extends State<SharedButton>
               child: Container(
                 width: double.infinity,
                 margin: const EdgeInsets.symmetric(horizontal: 2),
-                height: widget.height ?? AppDimensions.buttonHeight.h,
+                height: widget.height ?? AppDimensions.buttonHeight,
                 padding: widget.padding ??
                     const EdgeInsets.symmetric(
                       horizontal: AppDimensions.horizontalMediumGap,
                       vertical: AppDimensions.verticalMediumGap,
-                    ).r,
+                    ),
                 decoration: BoxDecoration(
                   color: widget.disabled
                       ? context.colorScheme.disabledButtonColor
@@ -80,7 +79,7 @@ class _SharedButtonState extends State<SharedButton>
                               : context.colorScheme.primaryColor),
                   borderRadius: const BorderRadius.all(
                     Radius.circular(AppDimensions.buttonBorderRadius),
-                  ).r,
+                  ),
                 ),
                 alignment: Alignment.center,
                 child: Text(

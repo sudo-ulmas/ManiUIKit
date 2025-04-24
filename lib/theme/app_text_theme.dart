@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mani_uikit/theme/app_color_scheme.dart';
 import 'package:mani_uikit/util/util.dart';
 
@@ -21,92 +20,90 @@ class AppTextTheme extends Equatable {
     required this.usernameTextStyle,
   });
 
-
-  factory AppTextTheme.fromColorScheme(AppColorScheme colorScheme) =>
-      AppTextTheme(
+  factory AppTextTheme.fromColorScheme(AppColorScheme colorScheme) => AppTextTheme(
         colorScheme: colorScheme,
         titleTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.primaryTextColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 20.sp,
+          fontSize: 20,
           fontWeight: FontWeight.w600,
         ),
         subtitleTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.secondaryTextColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 14.sp,
+          fontSize: 14,
           fontWeight: FontWeight.w500,
         ),
         hintTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.inputHintTextColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 16.sp,
+          fontSize: 16,
           fontWeight: FontWeight.w500,
         ),
         inputTitleTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.secondaryTextColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 12.sp,
+          fontSize: 12,
           fontWeight: FontWeight.w500,
         ),
         inputTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.inputTextColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 16.sp,
+          fontSize: 16,
           fontWeight: FontWeight.w700,
         ),
         buttonTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.onPrimaryTextColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 14.sp,
+          fontSize: 14,
           fontWeight: FontWeight.w700,
         ),
         highlightedTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.primaryColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 14.sp,
+          fontSize: 14,
           fontWeight: FontWeight.w700,
         ),
         headingTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.primaryTextColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 30.sp,
+          fontSize: 30,
           fontWeight: FontWeight.w700,
         ),
         digitButtonTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.primaryVariantTextColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 24.sp,
+          fontSize: 24,
           fontWeight: FontWeight.w500,
         ),
         accountTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.inputTextColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 12.sp,
+          fontSize: 12,
           fontWeight: FontWeight.w600,
         ),
         accountTypeTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.primaryAccentColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 10.sp,
+          fontSize: 10,
           fontWeight: FontWeight.w500,
         ),
         usernameTextStyle: TextStyle(
           package: packageName,
           color: colorScheme.primaryVariantColor,
           fontFamily: FontFamily.gilroy,
-          fontSize: 12.sp,
+          fontSize: 12,
           fontWeight: FontWeight.w700,
         ),
       );

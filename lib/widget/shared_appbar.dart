@@ -1,6 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mani_uikit/theme/theme.dart';
 import 'package:mani_uikit/util/util.dart';
 import 'package:mani_uikit/widget/appbar_button.dart';
@@ -24,7 +23,7 @@ class SharedAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        padding: const EdgeInsets.only(right: AppDimensions.defaultPadding).r,
+        padding: const EdgeInsets.only(right: AppDimensions.defaultPadding),
         height: kToolbarHeight,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -3,7 +3,6 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mani_uikit/theme/theme.dart';
 import 'package:mani_uikit/util/util.dart';
 import 'package:mani_uikit/widget/shared_appbar.dart';
@@ -121,7 +120,7 @@ class _SharedScaffoldState extends State<SharedScaffold> with TickerProviderStat
             behavior: HitTestBehavior.opaque,
             onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
             child: Scaffold(
-              drawerEdgeDragWidth: Platform.isAndroid ? 0.1.sw : null,
+              drawerEdgeDragWidth: Platform.isAndroid ? 0.1 * MediaQuery.sizeOf(context).width : null,
               endDrawer: widget.endDrawer,
               resizeToAvoidBottomInset: false,
               backgroundColor: Colors.transparent,
