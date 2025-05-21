@@ -33,7 +33,7 @@ class SharedAppbar extends StatelessWidget implements PreferredSizeWidget {
                 children: [
                   if (withBackButton)
                     GestureDetector(
-                      onTap:onBackButton ??  () => Navigator.of(context).pop(),
+                      onTap: onBackButton ?? () => Navigator.of(context).pop(),
                       behavior: HitTestBehavior.opaque,
                       child: Padding(
                         padding: const EdgeInsets.only(
@@ -58,7 +58,7 @@ class SharedAppbar extends StatelessWidget implements PreferredSizeWidget {
                     )
                   else
                     SvgIcon(
-                      icon: Assets.icons.logo,
+                      icon: Assets.icons.logoPully,
                       height: 16,
                       width: 64,
                     ),

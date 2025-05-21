@@ -86,12 +86,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/kafka_icon.svg
   SvgGenImage get kafkaIcon => const SvgGenImage('assets/icons/kafka_icon.svg');
 
-  /// File path: assets/icons/logo.svg
-  SvgGenImage get logo => const SvgGenImage('assets/icons/logo.svg');
-
   /// File path: assets/icons/logo_no_title.svg
   SvgGenImage get logoNoTitle =>
       const SvgGenImage('assets/icons/logo_no_title.svg');
+
+  /// File path: assets/icons/logo_pully.svg
+  SvgGenImage get logoPully => const SvgGenImage('assets/icons/logo_pully.svg');
 
   /// File path: assets/icons/notifications.svg
   SvgGenImage get notifications =>
@@ -137,46 +137,14 @@ class $AssetsIconsGen {
     incomeIcon,
     invoice,
     kafkaIcon,
-    logo,
     logoNoTitle,
+    logoPully,
     notifications,
     paidInvoice,
     person,
     time,
     transactions,
     wallet,
-  ];
-}
-
-class $AssetsImagesGen {
-  const $AssetsImagesGen();
-
-  /// File path: assets/images/first_screen.png
-  AssetGenImage get firstScreen =>
-      const AssetGenImage('assets/images/first_screen.png');
-
-  /// File path: assets/images/forth_screen.png
-  AssetGenImage get forthScreen =>
-      const AssetGenImage('assets/images/forth_screen.png');
-
-  /// File path: assets/images/second_screen.png
-  AssetGenImage get secondScreen =>
-      const AssetGenImage('assets/images/second_screen.png');
-
-  /// File path: assets/images/success.png
-  AssetGenImage get success => const AssetGenImage('assets/images/success.png');
-
-  /// File path: assets/images/third_screen.png
-  AssetGenImage get thirdScreen =>
-      const AssetGenImage('assets/images/third_screen.png');
-
-  /// List of all assets
-  List<AssetGenImage> get values => [
-    firstScreen,
-    forthScreen,
-    secondScreen,
-    success,
-    thirdScreen,
   ];
 }
 
@@ -240,7 +208,6 @@ class Assets {
   const Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
-  static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsTempGen temp = $AssetsTempGen();
 }
 
