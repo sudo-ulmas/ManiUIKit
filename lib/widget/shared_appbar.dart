@@ -59,8 +59,9 @@ class SharedAppbar extends StatelessWidget implements PreferredSizeWidget {
                   else
                     SvgIcon(
                       icon: Assets.icons.logoPully,
-                      height: 16,
-                      width: 64,
+                      height: 24,
+                      width: 104,
+                      fit: BoxFit.cover,
                     ),
                 ],
               ),
