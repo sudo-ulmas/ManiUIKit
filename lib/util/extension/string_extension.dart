@@ -8,16 +8,14 @@ extension StringExtension on String {
 
   TextInputType matchKeyboard() {
     if (isNotEmpty &&
-        (_isDigit(codeUnitAt(0)) ||
-            (length > 1 &&
-                _isLetter(codeUnitAt(0)) &&
-                _isLetter(codeUnitAt(1))))) {
+        (_isDigit(codeUnitAt(0)) || (length > 1 && _isLetter(codeUnitAt(0)) && _isLetter(codeUnitAt(1))))) {
       return TextInputType.number;
     }
     return TextInputType.text;
   }
 
   int lengthLimit() {
+    if (isEmpty) return 14;
     if (isNotEmpty && _isDigit(codeUnitAt(0))) {
       return 14;
     } else {
@@ -27,12 +25,10 @@ extension StringExtension on String {
 
   bool _isDigit(int codeUnit) => codeUnit >= 48 && codeUnit <= 57;
 
-  bool _isLetter(int codeUnit) =>
-      (codeUnit >= 65 && codeUnit <= 90) || (codeUnit >= 97 && codeUnit <= 122);
+  bool _isLetter(int codeUnit) => (codeUnit >= 65 && codeUnit <= 90) || (codeUnit >= 97 && codeUnit <= 122);
 
-  String get phoneMask => isEmpty
-      ? ''
-      : '''${substring(0, 2)} ${substring(2, 5)} ${substring(5, 7)} ${substring(7, 9)}''';
+  String get phoneMask =>
+      isEmpty ? '' : '''${substring(0, 2)} ${substring(2, 5)} ${substring(5, 7)} ${substring(7, 9)}''';
 
   DateTime? toDateTime() {
     if (isNotEmpty && length == 10) {
@@ -54,5 +50,4 @@ extension StringExtension on String {
   }
 
   String unmaskAccount() => split(' ').join();
-    
 }

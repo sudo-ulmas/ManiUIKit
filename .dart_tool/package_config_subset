@@ -20,8 +20,8 @@ file:///Users/abdullah/.pub-cache/hosted/pub.dev/args-2.7.0/
 file:///Users/abdullah/.pub-cache/hosted/pub.dev/args-2.7.0/lib/
 async
 3.4
-file:///Users/abdullah/.pub-cache/hosted/pub.dev/async-2.12.0/
-file:///Users/abdullah/.pub-cache/hosted/pub.dev/async-2.12.0/lib/
+file:///Users/abdullah/.pub-cache/hosted/pub.dev/async-2.13.0/
+file:///Users/abdullah/.pub-cache/hosted/pub.dev/async-2.13.0/lib/
 auto_size_text
 2.12
 file:///Users/abdullah/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0/
@@ -112,8 +112,8 @@ file:///Users/abdullah/.pub-cache/hosted/pub.dev/equatable-2.0.7/
 file:///Users/abdullah/.pub-cache/hosted/pub.dev/equatable-2.0.7/lib/
 fake_async
 3.3
-file:///Users/abdullah/.pub-cache/hosted/pub.dev/fake_async-1.3.2/
-file:///Users/abdullah/.pub-cache/hosted/pub.dev/fake_async-1.3.2/lib/
+file:///Users/abdullah/.pub-cache/hosted/pub.dev/fake_async-1.3.3/
+file:///Users/abdullah/.pub-cache/hosted/pub.dev/fake_async-1.3.3/lib/
 ffi
 3.7
 file:///Users/abdullah/.pub-cache/hosted/pub.dev/ffi-2.1.4/
@@ -196,8 +196,8 @@ file:///Users/abdullah/.pub-cache/hosted/pub.dev/json_annotation-4.9.0/
 file:///Users/abdullah/.pub-cache/hosted/pub.dev/json_annotation-4.9.0/lib/
 leak_tracker
 3.2
-file:///Users/abdullah/.pub-cache/hosted/pub.dev/leak_tracker-10.0.8/
-file:///Users/abdullah/.pub-cache/hosted/pub.dev/leak_tracker-10.0.8/lib/
+file:///Users/abdullah/.pub-cache/hosted/pub.dev/leak_tracker-10.0.9/
+file:///Users/abdullah/.pub-cache/hosted/pub.dev/leak_tracker-10.0.9/lib/
 leak_tracker_flutter_testing
 3.2
 file:///Users/abdullah/.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.9/
@@ -344,8 +344,8 @@ file:///Users/abdullah/.pub-cache/hosted/pub.dev/very_good_analysis-7.0.0/
 file:///Users/abdullah/.pub-cache/hosted/pub.dev/very_good_analysis-7.0.0/lib/
 vm_service
 3.3
-file:///Users/abdullah/.pub-cache/hosted/pub.dev/vm_service-14.3.1/
-file:///Users/abdullah/.pub-cache/hosted/pub.dev/vm_service-14.3.1/lib/
+file:///Users/abdullah/.pub-cache/hosted/pub.dev/vm_service-15.0.0/
+file:///Users/abdullah/.pub-cache/hosted/pub.dev/vm_service-15.0.0/lib/
 watcher
 3.1
 file:///Users/abdullah/.pub-cache/hosted/pub.dev/watcher-1.1.1/
@@ -383,7 +383,7 @@ flutter_test
 file:///Users/abdullah/development/flutter/packages/flutter_test/
 file:///Users/abdullah/development/flutter/packages/flutter_test/lib/
 mani_uikit
-3.2
+3.7
 file:///Users/abdullah/flutterProjects/mani_uikit/
 file:///Users/abdullah/flutterProjects/mani_uikit/lib/
 2
