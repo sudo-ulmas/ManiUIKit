@@ -11,6 +11,7 @@ extension DateTimeExtension on DateTime {
     return dateFormat.format(this);
   }
 
-  String get formatForMyId => DateFormat('yyyy.MM.dd').format(this);
+  String get formatForMyId => DateFormat('dd.MM.yyyy').format(this);
+  String get newFormatForMyId => DateFormat('yyyy-MM-dd').format(this);
   String get formatWithHypen => DateFormat('dd-MM-yyyy').format(this);
 }
