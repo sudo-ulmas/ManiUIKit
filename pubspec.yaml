@@ -43,7 +43,7 @@ flutter:
           weight: 400
         - asset: fonts/Gilroy-Bold.ttf
           weight: 700
-        - asset: fonts/Gilroy-SemiBold.ttf
+        - asset: fonts/Gilroy-Semibold.ttf
           weight: 600
         - asset: fonts/Gilroy-Medium.ttf
           weight: 500
@@ -51,7 +51,7 @@ flutter:
           weight: 200
         - asset: fonts/Gilroy-Light.ttf
           weight: 300
-        - asset: fonts/Gilroy-ExtraBold.ttf
+        - asset: fonts/Gilroy-Extrabold.ttf
           weight: 800
         - asset: fonts/Gilroy-Black.ttf
           weight: 900
