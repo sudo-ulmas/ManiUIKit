@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:math';
 import 'dart:ui';
 
@@ -46,10 +45,7 @@ class _SharedScaffoldState extends State<SharedScaffold> with TickerProviderStat
   @override
   void initState() {
     super.initState();
-    animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 700),
-    );
+    animationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 700));
     if (widget.isLoading) {
       animationController.repeat();
     }
@@ -75,97 +71,79 @@ class _SharedScaffoldState extends State<SharedScaffold> with TickerProviderStat
 
   @override
   Widget build(BuildContext context) => Stack(
-        alignment: Alignment.center,
-        children: [
-          if (widget.backgroundColor != null)
-            Container(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height,
-              color: widget.backgroundColor,
-            )
-          else ...[
-            Container(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height,
-              alignment: Alignment.topRight,
-              decoration: BoxDecoration(
-                gradient: RadialGradient(
-                  center: const Alignment(1.5, -1.5),
-                  radius: 1.4,
-                  colors: <Color>[
-                    const Color(0xFFA4A8FF),
-                    const Color(0xffF2F2F5).withOpacity(1),
-                  ],
-                  stops: const [0, 1],
-                ),
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
-                gradient: RadialGradient(
-                  center: const Alignment(2, -0.5),
-                  radius: 1.1,
-                  colors: [
-                    const Color(0xFFFFA4E0),
-                    const Color(0xffF2F3F5).withOpacity(0),
-                  ],
-                  stops: const [0.01, 1],
-                ),
-              ),
-            ),
-          ],
-          GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
-            child: Scaffold(
-              drawerEdgeDragWidth: Platform.isAndroid ? 0.1 * MediaQuery.sizeOf(context).width : null,
-              endDrawer: widget.endDrawer,
-              resizeToAvoidBottomInset: false,
-              backgroundColor: Colors.transparent,
-              appBar: widget.appBar ??
-                  SharedAppbar(
-                    onBackButton: widget.onBackButton,
-                    withBackButton: widget.withBackButton,
-                    title: widget.title,
-                    button: widget.actionButton,
-                  ),
-              body: Padding(
-                padding: widget.padding ?? const EdgeInsets.all(AppDimensions.defaultPadding),
-                child: widget.child,
-              ),
+    alignment: Alignment.center,
+    children: [
+      if (widget.backgroundColor != null)
+        Container(width: double.infinity, height: MediaQuery.of(context).size.height, color: widget.backgroundColor)
+      else ...[
+        Container(
+          width: double.infinity,
+          height: MediaQuery.of(context).size.height,
+          alignment: Alignment.topRight,
+          decoration: BoxDecoration(
+            gradient: RadialGradient(
+              center: const Alignment(1.5, -1.5),
+              radius: 1.4,
+              colors: <Color>[const Color(0xFFA4A8FF), const Color(0xffF2F2F5).withOpacity(1)],
+              stops: const [0, 1],
             ),
           ),
-          if (widget.isLoading) ...{
-            Positioned.fill(
-              child: TweenAnimationBuilder<double>(
-                builder: (context, value, child) {
-                  return BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: value, sigmaY: value),
-                    child: Container(
-                      color: Colors.black.withOpacity(0),
-                    ),
-                  );
-                },
-                tween: Tween(begin: 0, end: 5),
-                duration: const Duration(milliseconds: 250),
-              ),
+        ),
+        Container(
+          width: double.infinity,
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            gradient: RadialGradient(
+              center: const Alignment(2, -0.5),
+              radius: 1.1,
+              colors: [const Color(0xFFFFA4E0), const Color(0xffF2F3F5).withOpacity(0)],
+              stops: const [0.01, 1],
             ),
-            AnimatedBuilder(
-              builder: (context, child) {
-                return Transform.rotate(
-                  angle: animationController.value * 2 * pi,
-                  child: child,
-                );
-              },
-              animation: animationController,
-              child: SvgIcon(
-                icon: Assets.icons.circleProgress,
-		colorFilter: widget.loadingColor,
+          ),
+        ),
+      ],
+      GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+        child: Scaffold(
+          endDrawer: widget.endDrawer,
+          resizeToAvoidBottomInset: false,
+          backgroundColor: Colors.transparent,
+          appBar:
+              widget.appBar ??
+              SharedAppbar(
+                onBackButton: widget.onBackButton,
+                withBackButton: widget.withBackButton,
+                title: widget.title,
+                button: widget.actionButton,
               ),
-            ),
+          body: Padding(
+            padding: widget.padding ?? const EdgeInsets.all(AppDimensions.defaultPadding),
+            child: widget.child,
+          ),
+        ),
+      ),
+      if (widget.isLoading) ...{
+        Positioned.fill(
+          child: TweenAnimationBuilder<double>(
+            builder: (context, value, child) {
+              return BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: value, sigmaY: value),
+                child: Container(color: Colors.black.withOpacity(0)),
+              );
+            },
+            tween: Tween(begin: 0, end: 5),
+            duration: const Duration(milliseconds: 250),
+          ),
+        ),
+        AnimatedBuilder(
+          builder: (context, child) {
+            return Transform.rotate(angle: animationController.value * 2 * pi, child: child);
           },
-        ],
-      );
+          animation: animationController,
+          child: SvgIcon(icon: Assets.icons.circleProgress, colorFilter: widget.loadingColor),
+        ),
+      },
+    ],
+  );
 }
